@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Altered Eco Gallery</title>
+<meta property="og:title" content="Altered Eco Gallery">
+<meta property="og:type" content="website">
+
+		<link rel="icon" type="image/x-icon" href="assets/b9.ico" />
+
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Nunito;
+  background-color: black;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 15%;
+  padding: 4px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 7px;
+  right: 220px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div style="background-color: rgba(255,255,255,0.2);">
+  <h1 style="color:white; text-align:center;">Altered Eco Gallery</h2>
+  <p style="color:white; text-align:center;">Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="img/20220208214407_1.jpg" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img/Eco_ivGAaGGO6y.jpg" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img/Screenshot_572.png" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img/Screenshot_576.png" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img/Gtwt8hd.jpg" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img/Screenshot_609.png" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+ </div> 
+ <div class="row"> 
+  <div class="column">
+    <img src="img/Screenshot_608.png" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img/SPOILER_20220211165508_1.jpg" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img/SPOILER_20220211165437_1.jpg" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img/VdZ6fpk.jpg" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img/ew1ttUN.jpg" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img/ZDqe3vB.jpg" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>   
+</div>
+<div class="row"> 
+  <div class="column">
+    <img src="img/Screenshot_529.jpg" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img/Screenshot (439).png" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img/Screenshot (411).png" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img/Screenshot (255).png" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="img/Screenshot (174).png" alt="" style="width:80%" onclick="myFunction(this);">
+  </div> 
+  <div class="column">
+    <img src="img/Screenshot (130).png" alt="" style="width:80%" onclick="myFunction(this);">
+  </div>    
+</div>
+
+<div class="container" style="">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:90%">
+  <div id="imgtext"></div>
+</div>
+<div class="row" style="text-align:center;"> 
+<a style="color:white; text-align:center;" href="http://www.alteredeco.site/" style="color:#FFFFFF;">  Main Page</a>
+</div>
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>
